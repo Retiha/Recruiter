@@ -1,0 +1,108 @@
+[
+  {
+    "id": "job_python_backend",
+    "title": "Senior Python Backend Engineer",
+    "seniority_level": "Senior",
+    "min_experience_years": 5.0,
+    "education_requirement": "Bachelor's or Master's in Computer Science or related engineering discipline",
+    "required_skills": [
+      "Python",
+      "FastAPI",
+      "Django",
+      "PostgreSQL",
+      "Docker",
+      "REST API",
+      "Git",
+      "Redis"
+    ],
+    "preferred_skills": [
+      "AWS",
+      "Kubernetes",
+      "Microservices",
+      "CI/CD",
+      "Unit Testing"
+    ],
+    "description": "We are seeking an experienced Senior Python Backend Engineer to architect, build, and maintain high-throughput microservices and distributed backend systems. You will lead database optimization, design RESTful and gRPC APIs, implement caching layers with Redis, and collaborate closely with frontend and DevOps engineers. Strong foundation in Python, relational databases (PostgreSQL), containerization with Docker, and clean system architecture is required. Bonus experience includes deploying on AWS, Kubernetes orchestration, and writing automated unit/integration tests."
+  },
+  {
+    "id": "job_fullstack_react",
+    "title": "Full Stack Developer (React & Node.js)",
+    "seniority_level": "Mid-Level",
+    "min_experience_years": 3.0,
+    "education_requirement": "Bachelor's Degree in Computer Science, Software Engineering, or equivalent experience",
+    "required_skills": [
+      "JavaScript",
+      "TypeScript",
+      "React",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "HTML5",
+      "CSS3",
+      "Git"
+    ],
+    "preferred_skills": [
+      "Next.js",
+      "GraphQL",
+      "Tailwind CSS",
+      "Docker",
+      "AWS",
+      "Redux"
+    ],
+    "description": "Join our dynamic product engineering team as a Full Stack Developer! You will create responsive web applications, design reusable React components, and build scalable Node.js/Express backend APIs. You must be proficient in modern JavaScript/TypeScript, React state management, REST APIs, MongoDB database queries, and version control with Git. Experience with Next.js, GraphQL, Tailwind CSS, and cloud deployment on AWS is highly preferred."
+  },
+  {
+    "id": "job_devops_cloud",
+    "title": "DevOps & Cloud Infrastructure Architect",
+    "seniority_level": "Senior",
+    "min_experience_years": 4.0,
+    "education_requirement": "Bachelor's in Computer Science, Information Technology, or relevant certifications",
+    "required_skills": [
+      "AWS",
+      "Docker",
+      "Kubernetes",
+      "Terraform",
+      "Linux",
+      "CI/CD",
+      "Jenkins",
+      "GitHub Actions",
+      "Bash"
+    ],
+    "preferred_skills": [
+      "Ansible",
+      "Prometheus",
+      "Grafana",
+      "Python",
+      "Helm",
+      "Nginx"
+    ],
+    "description": "We are looking for a DevOps & Cloud Infrastructure Architect to scale our multi-region AWS cloud infrastructure and optimize continuous deployment pipelines. You will write Infrastructure as Code (IaC) using Terraform, manage containerized microservices on Kubernetes (EKS), establish robust CI/CD workflows using GitHub Actions and Jenkins, and implement production observability with Prometheus and Grafana. Proficiency in Linux administration and Bash scripting is essential."
+  },
+  {
+    "id": "job_data_scientist",
+    "title": "Data Scientist / Machine Learning Engineer",
+    "seniority_level": "Mid-Level",
+    "min_experience_years": 3.0,
+    "education_requirement": "Master's or Bachelor's in Data Science, Statistics, Computer Science, or Mathematics",
+    "required_skills": [
+      "Python",
+      "Machine Learning",
+      "Scikit-Learn",
+      "PyTorch",
+      "Pandas",
+      "NumPy",
+      "SQL",
+      "Data Analysis"
+    ],
+    "preferred_skills": [
+      "Deep Learning",
+      "NLP",
+      "Large Language Models",
+      "Apache Spark",
+      "Docker",
+      "AWS",
+      "Tableau"
+    ],
+    "description": "Our Data & AI team is hiring a Data Scientist / ML Engineer to develop predictive models, natural language processing pipelines, and statistical analysis tools. You will extract and transform large datasets using SQL and Pandas, train supervised/unsupervised machine learning models using Scikit-Learn and PyTorch, and evaluate model performance. Prior experience with NLP, LLMs, Apache Spark, and containerizing ML models with Docker is a major advantage."
+  }
+]
