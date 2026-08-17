@@ -2,12 +2,6 @@
 
 A production-grade, local **AI Recruiter** web application designed to help recruiters screen, parse, analyze, and rank candidate resumes against job requisitions using rule-based scoring and NLP.
 
-![AI Recruiter Dashboard](https://img.shields.io/badge/Streamlit-1.35+-FF4B4B?logo=streamlit)
-![PyMuPDF](https://img.shields.io/badge/PyMuPDF-1.24+-2563EB)
-![spaCy](https://img.shields.io/badge/spaCy-NLP-09A3D5?logo=spacy)
-![scikit-learn](https://img.shields.io/badge/scikit--learn-ML-F7931E?logo=scikitlearn)
-![Zero Paid APIs](https://img.shields.io/badge/Cost-100%25%20Local-10B981)
-
 ---
 
 ## 🌟 Key Features
@@ -33,10 +27,10 @@ A production-grade, local **AI Recruiter** web application designed to help recr
    - **20% Context & Keyword Similarity**:
      - TF-IDF Vectorization and Cosine Similarity between the candidate resume text and target job description.
    - **Categorization**:
-     - 🌟 **Excellent Match** ($\ge 80\%$)
-     - 🔷 **Good Match** ($65\% - 79\%$)
-     - 🟡 **Moderate Match** ($50\% - 64\%$)
-     - 🔴 **Low Match** ($< 50\%$)
+     - 🌟 **Excellent Match** (≥80)
+     - 🔷 **Good Match** (65)
+     - 🟡 **Moderate Match** (50)
+     - 🔴 **Low Match** (<50)
 
 4. **Interactive Recruiter Dashboard**
    - Summary KPI cards: Total Resumes, Suitable Candidates, Average Score, Top Score.
@@ -61,7 +55,7 @@ A production-grade, local **AI Recruiter** web application designed to help recr
 
 ## 🏗️ Project Architecture
 
-```
+```text
 AI-Recruiter/
 ├── app.py                     # Main Streamlit web application
 ├── requirements.txt           # Production dependencies
@@ -101,75 +95,88 @@ AI-Recruiter/
     ├── test_resume_parser.py  # Unit tests for contact, skill, and experience extraction
     ├── test_matcher.py        # Unit tests for scoring logic & edge cases
     └── test_exporters.py      # Unit tests for CSV & JSON exports
-```
 
----
-
-## 🚀 Quickstart Guide
-
-### 1. Prerequisites
-- Python 3.11 or higher
-- Git
-
-### 2. Installation
+🚀 Quickstart Guide
+1. Prerequisites
+Python 3.11 or higher
+Git
+2. Installation
 
 Clone the repository and install the dependencies:
 
-```bash
 # Navigate to project directory
 cd AI-Recruiter
+
 
 # Install dependencies
 pip install -r requirements.txt
 
+
 # Download the spaCy English NLP model
 python -m spacy download en_core_web_sm
-```
 
-*(Note: If spaCy model download is restricted in your environment, the application will automatically fall back to its built-in high-performance regex & scikit-learn NLP engine without crashing!)*
+(Note: If spaCy model download is restricted in your environment, the application will automatically fall back to its built-in high-performance regex & scikit-learn NLP engine without crashing!)
 
-### 3. Generate Sample Resumes (Optional)
+3. Generate Sample Resumes (Optional)
 
-6 realistic candidate PDF resumes are included in `data/sample_resumes/`. You can regenerate them at any time:
+6 realistic candidate PDF resumes are included in data/sample_resumes/. You can regenerate them at any time:
 
-```bash
 python assets/sample_generator.py
-```
-
-### 4. Run the Web Application
+4. Run the Web Application
 
 Launch the Streamlit dashboard:
 
-```bash
 streamlit run app.py
-```
 
-The application will open in your default browser at `http://localhost:8501`.
+The application will open in your default browser at:
 
----
+http://localhost:8501
+🌐 Live Demo
 
-## 🧪 Running the Test Suite
+The application is deployed and available online through Streamlit Community Cloud.
 
-Run all automated unit tests using Python's standard `unittest`:
+Live Application:
+https://ai-recruiter-reti.streamlit.app/
 
-```bash
+GitHub Repository:
+https://github.com/Retiha/Recruiter
+
+Deployment
+
+The application is deployed directly from the GitHub repository.
+
+Deployment flow:
+
+The project was initialized as a Git repository.
+The source code was committed to the main branch.
+The repository was pushed to GitHub.
+The GitHub repository was connected to Streamlit Community Cloud.
+app.py was configured as the main application file.
+Streamlit automatically installs the dependencies listed in requirements.txt.
+The application is built and deployed as a public Streamlit application.
+Future changes can be deployed by pushing updated commits to the main branch.
+Production Deployment Configuration
+Setting	Value
+Repository	Retiha/Recruiter
+Branch	main
+Main file	app.py
+Platform	Streamlit Community Cloud
+Application URL	https://ai-recruiter-reti.streamlit.app/
+🧪 Running the Test Suite
+
+Run all automated unit tests using Python's standard unittest:
+
 python -m unittest discover tests -v
-```
+📊 Transparent Matching Formula
 
----
+Overall Score = Skills Score (60 pts) + Experience Score (20 pts) + Context Relevance (20 pts)
 
-## 📊 Transparent Matching Formula
+Component	Weight	Calculation Method
+Required Skills	45	Matching Required Skills / Total Required Skills × 45
+Preferred Skills	15	Matching Preferred Skills / Total Preferred Skills × 15
+Experience Relevance	20	If Candidate Exp ≥ Target Exp → 20 pts; else Candidate Exp / Target Exp × 20
+Context & Keyword Similarity	20	Cosine Similarity(TF-IDF Resume, TF-IDF JD) × 20
+📄 License
 
-$$\text{Overall Score} = \text{Skills Score (60 pts)} + \text{Experience Score (20 pts)} + \text{Context Relevance (20 pts)}$$
-
-| Component | Weight | Calculation Method |
-| :--- | :---: | :--- |
-| **Required Skills** | $45\%$ | $\frac{\text{Matching Required Skills}}{\text{Total Required Skills}} \times 45$ |
-| **Preferred Skills** | $15\%$ | $\frac{\text{Matching Preferred Skills}}{\text{Total Preferred Skills}} \times 15$ |
-| **Experience Relevance** | $20\%$ | If $\text{Candidate Exp} \ge \text{Target Exp} \implies 20\text{ pts}$; else $\frac{\text{Candidate Exp}}{\text{Target Exp}} \times 20$ |
-| **Context & Keyword Similarity** | $20\%$ | $\text{Cosine Similarity}(\text{TF-IDF}_{\text{Resume}}, \text{TF-IDF}_{\text{JD}}) \times 20$ |
-
----
-
-## 📄 License
 MIT License. Built for local, privacy-friendly, and cost-free recruitment workflow optimization.
+
